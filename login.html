@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="login-container">
+    <div class="login-card">
+        <h2>Welcome to <span class="highlight">EBDA</span></h2>
+        <p>قم بإنشاء حسابك لتبدأ رحلة التعلم</p>
+
+        <div class="profile-upload-area">
+            <div class="profile-preview">
+                <img src="profile-placeholder.png" id="profileImagePreview" alt="Profile">
+            </div>
+            <label for="profileImageInput" class="upload-btn" style="cursor: pointer;">إضافة صورة</label>
+            <input type="file" id="profileImageInput" onchange="previewImage()" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="studentName" placeholder="الاسم بالكامل" required>
+        </div>
+        <div class="input-group">
+            <input type="email" id="studentEmail" placeholder="البريد الإلكتروني" required>
+        </div>
+        <div class="input-group">
+            <input type="tel" id="studentPhone" placeholder="رقم الموبايل" required>
+        </div>
+        <button onclick="registerUser()" class="main-btn">إنشاء حساب</button>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js.js"></script>
+</body>
+</html>

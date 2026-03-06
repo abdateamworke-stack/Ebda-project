@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز الكورسات | Ebda Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="hub-page">
+    <canvas id="matrixCanvas"></canvas>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">EBDA <span>PROJECT</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="Courses hub.html" class="active">الكورسات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ <div class="courses-cards-container">
+    <div class="course-main-card available">
+        <div class="card-status">متاح الآن</div>
+        <h3>دورة HTML</h3>
+        <button class="main-btn" onclick="subscribeCourse('دورة HTML')">اشترك الآن</button>
+    </div>
+
+    <div class="course-main-card locked">
+        <div class="card-status soon">قريباً</div>
+        <h3>دورة CSS</h3>
+        <button disabled>انتظرونا</button>
+    </div>
+
+    <div class="course-main-card locked">
+        <div class="card-status soon">قريباً</div>
+        <h3>دورة JS</h3>
+        <button disabled>انتظرونا</button>
+    </div>
+</div>
+
+    <script src="js.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

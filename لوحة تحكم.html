@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+    <div class="dash-grid">
+        <div class="dash-card profile-card">
+            <div class="profile-header" style="text-align: center; margin-bottom: 20px;">
+                <img id="dashImage" src="profile-placeholder.png" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #4ade80;">
+                <h3 id="dashName" style="margin-top: 10px;">...</h3>
+            </div>
+            <div class="user-details">
+                <p>📧 الإيميل: <span id="dashEmail">...</span></p>
+                <p>📞 الموبايل: <span id="dashPhone">...</span></p>
+                <hr style="margin: 15px 0; opacity: 0.1;">
+                <p>⭐ الباقة المشترك فيها: <span id="dashPlan" class="highlight" style="color: #4ade80; font-weight: bold;">لا يوجد</span></p>
+            </div>
+        </div>
+
+        <div class="dash-card">
+            <h3>متابعة الدروس</h3>
+            <p>يمكنك الآن البدء في مشاهدة المحتوى المخصص لك.</p>
+            <a href="cors.html" class="main-btn">دخول لصفحة الفيديو</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // سحب بيانات الطالب من الـ LocalStorage
+        const studentData = JSON.parse(localStorage.getItem('studentInfo'));
+        // سحب اسم الباقة
+        const plan = localStorage.getItem('subscribedPlan');
+
+        if(studentData) {
+            document.getElementById('dashName').innerText = studentData.name;
+            document.getElementById('dashEmail').innerText = studentData.email;
+            document.getElementById('dashPhone').innerText = studentData.phone;
+            // عرض الصورة إذا وجدت
+            if(studentData.profileImage) {
+                document.getElementById('dashImage').src = studentData.profileImage;
+            }
+        }
+
+        if(plan) {
+            document.getElementById('dashPlan').innerText = plan;
+        }
+    });
+</script>
+</body>
+</html>
