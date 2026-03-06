@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebda Project | Professional Tech</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <canvas id="matrixCanvas"></canvas>
-
-    <header>
-        <div class="container nav-wrapper">
-            <div class="logo">EBDA <span>PROJECT</span></div>
-<nav>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="cors.html">Courses</a></li>
-        <li id="auth-area">
-            <a href="login.html" class="btn-login">Login</a>
-        </li>
-    </ul>
-</nav>
-        </div>
-    </header>
-
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">EBDA <span>PROJECT</span></div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="cors.html">Courses</a></li>
+                <li id="auth-area"><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
     <section class="hero">
         <div class="container hero-wrapper">
             
@@ -50,6 +53,7 @@
     <script src="js.js"></script>
 </body>
 </html>
+
 
 
 
