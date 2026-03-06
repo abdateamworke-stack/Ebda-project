@@ -795,4 +795,25 @@ function initVideoPlayer() {
 document.addEventListener('DOMContentLoaded', () => {
     updateHeader();
     initVideoPlayer();
+
+});
+// وظيفة القائمة الجانبية للموبايل
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-list');
+
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            // تحويل التلات شرط لعلامة X (اختياري لشكل أشيك)
+            menuBtn.classList.toggle('is-active');
+        });
+    }
+}
+
+// تشغيلها عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu();
+    // ... باقي الكود بتاعك ...
 });
