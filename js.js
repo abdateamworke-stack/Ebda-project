@@ -818,25 +818,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // ... باقي الكود بتاعك ...
 });
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-// يجب وضع نفس الـ firebaseConfig هنا أيضاً
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-async function updateHeader() {
-    const userId = localStorage.getItem('userId');
-    const authArea = document.getElementById('auth-area');
-    
-    if (userId && authArea) {
-        // جلب بيانات المستخدم من Firestore باستخدام المعرف الخاص به
-        const docRef = doc(db, "users", userId);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-            const userData = docSnap.data();
-            authArea.innerHTML = `<span style="color:#4ade80">اهلا بك، ${userData.name}</span>`;
-        }
-    }
-}
